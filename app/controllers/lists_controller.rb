@@ -23,8 +23,8 @@ class ListsController < ApplicationController
     end
 
     def update
-        list = List.find(parmas[:id])
-        if list.upadate(list_params)
+        list = List.find(params[:id])
+        if list.update(list_params)
             render json: list
         else
             render json: {error: "200"}
